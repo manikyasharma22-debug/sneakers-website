@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Thala 7.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================== TOP NAVIGATION ==================== -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-thala">Thala</span>
+                <span class="logo-seven"> 7.</span>
+            </a>
+
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li class="has-dropdown">
+                        <a href="product.html" class="nav-link">Brands <span class="chevron">▾</span></a>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="cart.html" class="nav-link">More <span class="chevron">▾</span></a>
+                    </li>
+                    <li><a href="checkout.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="search-box">
+                    <svg class="icon search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="search" placeholder="Search" aria-label="Search sneakers">
+                </div>
+
+                <a href="cart.html" class="cart-btn" aria-label="View Cart">
+                    <svg class="icon cart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                    <span class="cart-badge">3</span>
+                </a>
+
+                <div class="profile-avatar">
+                    <img src="assets/profile.png" alt="User Profile">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SCREEN 4: CHECKOUT -->
+        <section class="checkout-section">
+            <div class="section-container">
+                <div class="checkout-title-bar">
+                    <span class="checkout-breadcrumb">Checkout</span>
+                </div>
+
+                <div class="cart-checkout-grid">
+                    <!-- Left: Form -->
+                    <div class="checkout-form-container">
+                        <!-- Contact Details -->
+                        <div class="form-group-block">
+                            <h2 class="section-subtitle">Contact Details</h2>
+                            <div class="field-item">
+                                <label for="email-id" class="form-label">Email ID</label>
+                                <input type="text" id="email-id" class="input-control" placeholder="John Doe">
+                            </div>
+                        </div>
+
+                        <!-- Payment -->
+                        <div class="form-group-block">
+                            <h2 class="section-subtitle">Payment</h2>
+
+                            <div class="payment-tabs">
+                                <label class="payment-tab active-tab">
+                                    <input type="radio" name="paymethod" checked>
+                                    <div class="tab-content">
+                                        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                                        </svg>
+                                        <span>Card</span>
+                                    </div>
+                                </label>
+
+                                <label class="payment-tab">
+                                    <input type="radio" name="paymethod">
+                                    <div class="tab-content">
+                                        <span class="crypto-icon">₿</span>
+                                        <span>Crypto</span>
+                                    </div>
+                                </label>
+
+                                <label class="payment-tab">
+                                    <input type="radio" name="paymethod">
+                                    <div class="tab-content">
+                                        <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M3 21h18M3 10h18M5 10v11M19 10v11M9 10v11M15 10v11M12 2L2 7h20L12 2z"></path>
+                                        </svg>
+                                        <span>Bank</span>
+                                    </div>
+                                </label>
+
+                                <div class="payment-tab more-options">
+                                    <span>⋮</span>
+                                </div>
+                            </div>
+
+                            <div class="card-details-fields">
+                                <div class="field-item">
+                                    <label for="card-number" class="form-label">Card Number</label>
+                                    <input type="text" id="card-number" class="input-control" placeholder="John Doe">
+                                </div>
+
+                                <div class="field-row-2">
+                                    <div class="field-item">
+                                        <label for="card-expiry" class="form-label">Expiry</label>
+                                        <input type="text" id="card-expiry" class="input-control" placeholder="MM/YY">
+                                    </div>
+                                    <div class="field-item">
+                                        <label for="card-cvc" class="form-label">CVC</label>
+                                        <input type="password" id="card-cvc" class="input-control" placeholder="***">
+                                    </div>
+                                </div>
+
+                                <div class="field-row-2">
+                                    <div class="field-item">
+                                        <label for="country-select" class="form-label">Country</label>
+                                        <div class="select-container">
+                                            <select id="country-select" class="input-control select-control">
+                                                <option selected>India</option>
+                                                <option>United States</option>
+                                                <option>United Kingdom</option>
+                                                <option>Australia</option>
+                                            </select>
+                                            <span class="select-arrow">▾</span>
+                                        </div>
+                                    </div>
+                                    <div class="field-item">
+                                        <label for="zip-code" class="form-label">ZIP</label>
+                                        <input type="text" id="zip-code" class="input-control" placeholder="XXXXX">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Summary -->
+                    <div class="order-summary-card">
+                        <h2 class="summary-heading">Order Summary</h2>
+
+                        <div class="coupon-block">
+                            <label for="coupon-checkout" class="input-label">Enter Coupon Code</label>
+                            <div class="coupon-input-group">
+                                <input type="text" id="coupon-checkout" placeholder="COUPON CODE">
+                                <button type="button" class="btn-apply">Apply Coupon</button>
+                            </div>
+                        </div>
+
+                        <div class="summary-breakdown">
+                            <div class="summary-row">
+                                <span class="summary-key">Sub Total</span>
+                                <span class="summary-val">₹4,700</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-key">Taxes(if applicable)</span>
+                                <span class="summary-val">₹199</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-key">Discount</span>
+                                <span class="summary-val">₹0</span>
+                            </div>
+                            <div class="summary-row total-row">
+                                <span class="summary-key">Total</span>
+                                <span class="summary-val">₹4,999</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-pay-orange">Pay Now ₹4,999</button>
+
+                        <div class="trust-badges">
+                            <div class="badge-item secure-badge">
+                                <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                                <span>100% SECURE</span>
+                            </div>
+                            <div class="badge-item razorpay-badge">
+                                <span class="razor-logo">/</span>
+                                <span class="razor-text">Razorpay</span>
+                            </div>
+                            <div class="badge-item payment-badge">
+                                <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                                <span>SECURE PAYMENT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Thala 7 Sneakers. Seven by M.S. Dhoni. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
